@@ -1,0 +1,61 @@
+[
+  {
+    "name": "photo",
+    "label": "Photo",
+    "required": true,
+    "locked": false,
+    "responsive": true,
+    "resizable": false,
+    "show_loading": true,
+    "type": "image",
+    "default": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "lazy"
+    }
+  },
+  {
+    "name": "member_name",
+    "label": "Name",
+    "required": true,
+    "locked": false,
+    "type": "text",
+    "default": "Team member name"
+  },
+  {
+    "name": "role",
+    "label": "Role",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Job title"
+  },
+  {
+    "name": "bio",
+    "label": "Bio",
+    "required": false,
+    "locked": false,
+    "type": "richtext",
+    "default": "<p>Short bio goes here.</p>"
+  },
+  {
+    "name": "style_group",
+    "label": "Style",
+    "type": "group",
+    "children": [
+      {
+        "name": "member_border",
+        "label": "Card Border",
+        "type": "border",
+        "default": {
+          "size": 1,
+          "unit": "px",
+          "style": "solid",
+          "opacity": 100,
+          "color": "#CBD6E2"
+        }
+      }
+    ]
+  }
+]

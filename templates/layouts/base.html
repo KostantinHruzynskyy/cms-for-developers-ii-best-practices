@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ standard_header_includes }}
+  <link rel="stylesheet" href="{{ get_asset_url('../css/main.css') }}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  {% include './partials/header.html' %}
+
+  <main id="main-content" role="main">
+    {% block body %}{% endblock %}
+  </main>
+
+  {% include './partials/footer.html' %}
+
+  {{ standard_footer_includes }}
+</body>
+</html>

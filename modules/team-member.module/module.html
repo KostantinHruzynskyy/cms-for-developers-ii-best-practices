@@ -1,0 +1,23 @@
+{% require_css %}
+  {% scope_css %}
+    .team-member-{{ module.id }} {
+      {{ module.style_group.member_border.css }}
+    }
+  {% end_scope_css %}
+{% end_require_css %}
+
+<div class="team-member team-member-{{ module.id }}">
+  {% if module.photo.src %}
+    {% set loadingAttr = module.photo.loading != 'disabled' ? 'loading="{{ module.photo.loading }}"' : '' %}
+    <img class="team-member__photo"
+         src="{{ resize_image_url(module.photo.src, 300) }}"
+         alt="{{ module.photo.alt }}"
+         width="{{ module.photo.width }}"
+         height="{{ module.photo.height }}"
+         {{ loadingAttr }}>
+  {% endif %}
+
+  <h3 class="team-member__name">{% inline_text field="member_name" value="{{ module.member_name }}" %}</h3>
+  <p class="team-member__role">{% inline_text field="role" value="{{ module.role }}" %}</p>
+  <div class="team-member__bio">{% inline_rich_text field="bio" value="{{ module.bio }}" %}</div>
+</div>

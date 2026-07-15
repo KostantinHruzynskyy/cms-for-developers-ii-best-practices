@@ -1,0 +1,42 @@
+/* main.css
+   Global theme styles. Pulls in _layout.css via the include tag so all
+   layout rules ship as part of the single compiled stylesheet, as shown
+   in "Reducing Code Repetition in Your Theme". */
+
+{% include '../css/_layout.css' %}
+
+:root {
+  --primary-color: {{ theme.color_settings.primary_color.color }};
+  --secondary-color: {{ theme.color_settings.secondary_color.color }};
+  --accent-color: {{ theme.color_settings.accent_color.color }};
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+/* Skip to content link - visually hidden until focused */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+header {
+  background-color: {{ theme.header_footer.header_bg_color.color }};
+}
+
+footer {
+  background-color: {{ theme.header_footer.footer_bg_color.color }};
+}

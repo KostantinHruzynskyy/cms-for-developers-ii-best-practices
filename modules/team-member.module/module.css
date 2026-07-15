@@ -1,0 +1,15 @@
+.team-member {
+  padding: 16px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.team-member__photo {
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.team-member__role {
+  color: var(--secondary-color);
+  font-style: italic;
+}

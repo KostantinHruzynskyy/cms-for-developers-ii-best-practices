@@ -1,0 +1,65 @@
+[
+  {
+    "name": "color_settings",
+    "label": "Color Settings",
+    "type": "group",
+    "children": [
+      {
+        "name": "primary_color",
+        "label": "Primary Color",
+        "type": "color",
+        "default": {
+          "color": "#33475B",
+          "opacity": 100
+        },
+        "inherit_from_brand": true,
+        "help_text": "Inherits from your account's brand settings. Editors can override per-page in the design manager."
+      },
+      {
+        "name": "secondary_color",
+        "label": "Secondary Color",
+        "type": "color",
+        "default": {
+          "color": "#516F90",
+          "opacity": 100
+        },
+        "inherit_from_brand": true
+      },
+      {
+        "name": "accent_color",
+        "label": "Accent Color",
+        "type": "color",
+        "default": {
+          "color": "#FF7A59",
+          "opacity": 100
+        },
+        "inherit_from_brand": true
+      }
+    ]
+  },
+  {
+    "name": "header_footer",
+    "label": "Header & Footer",
+    "type": "group",
+    "children": [
+      {
+        "name": "header_bg_color",
+        "label": "Header Background Color",
+        "type": "color",
+        "default": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        }
+      },
+      {
+        "name": "footer_bg_color",
+        "label": "Footer Background Color",
+        "type": "color",
+        "default": {
+          "color": "#EAF0F6",
+          "opacity": 100
+        }
+      }
+    ]
+  }
+]

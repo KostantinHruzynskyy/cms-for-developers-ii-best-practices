@@ -1,0 +1,22 @@
+<!--
+  label: Team Members
+  screenshot_path: ../images/sections-preview/team-members-preview.png
+  css_assets: []
+  js_assets: []
+  global: false
+  categories: ['content']
+  is_available_for_new_content: true
+-->
+<section class="team-members-section" aria-labelledby="team-members-heading">
+  <div id="team-members-heading">
+    {% module "team_heading" path="@hubspot/rich_text",
+      html="<h2>Meet the Team</h2>"
+    %}
+  </div>
+
+  <div class="team-members-grid">
+    {% module "team_member_1" path="../modules/team-member.module" %}
+    {% module "team_member_2" path="../modules/team-member.module" %}
+    {% module "team_member_3" path="../modules/team-member.module" %}
+  </div>
+</section>

@@ -1,0 +1,14 @@
+<header role="banner">
+  <div class="body-wrapper">
+    <a class="site-logo" href="/">
+      {% if theme.site_settings.logo %}
+        <img src="{{ theme.site_settings.logo.src }}" alt="{{ theme.site_settings.logo.alt|default('Site logo', true) }}">
+      {% else %}
+        <span>Site Name</span>
+      {% endif %}
+    </a>
+    <nav aria-label="Primary navigation">
+      {{ menu(menu_id="main_navigation", root_type="site_root") }}
+    </nav>
+  </div>
+</header>

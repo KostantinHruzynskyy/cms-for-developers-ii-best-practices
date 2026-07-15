@@ -1,0 +1,33 @@
+/* _layout.css
+   Base layout rules for the drag-and-drop areas so content behaves
+   predictably inside the page editor (per "Reducing Code Repetition
+   in Your Theme"). Adjust breakpoints to match your original theme. */
+
+.body-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.hs_cos_wrapper[data-hs-cos-type="layout_section"] {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .body-wrapper {
+    padding: 0 16px;
+  }
+}
+
+/* Ensures nested rows/columns don't overflow at narrow widths */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

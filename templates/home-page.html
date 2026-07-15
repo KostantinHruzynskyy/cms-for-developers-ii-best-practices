@@ -1,0 +1,32 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home Page
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <div class="body-wrapper">
+
+    {% dnd_area "main_content" %}
+      {% dnd_section %}
+        {% dnd_row %}
+          {% dnd_column %}
+            {% dnd_module path="../sections/image-and-text-section.html" %}
+            {% end_dnd_module %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_section %}
+
+      {% dnd_section %}
+        {% dnd_row %}
+          {% dnd_column %}
+            {% dnd_module path="../sections/team-members-section.html" %}
+            {% end_dnd_module %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+  </div>
+{% endblock %}
